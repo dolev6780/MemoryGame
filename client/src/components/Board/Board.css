@@ -1,0 +1,16 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 840px;
+  margin-inline: auto;
+}
+
+.grid div {
+  aspect-ratio: 1/1;
+  overflow: auto;
+  background-color: #d8d8d8;
+}
+
+
+

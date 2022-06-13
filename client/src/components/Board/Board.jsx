@@ -1,28 +1,13 @@
 import React from 'react'
+import GameCard from '../GameCard/GameCard'
 import './Board.css'
-export default function Board() {
+export default function Board(props) {
+  
   return (
-<div class="grid">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
+<div className="grid">
+    {props.cards.map(card => {
+      return <GameCard handleChoice={props.handleChoice} key={card.id} card={card}/>
+    })}
+  </div>
   )
 }
